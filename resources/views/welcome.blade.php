@@ -50,9 +50,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{route('promotion_view')}}">Khuyến Mãi</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('news_view')}}">Tin Tức</a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="{{route('image_view')}}">Hình Ảnh</a>
               </li>
@@ -390,57 +388,7 @@
         
       </div>
     </section> <!-- .section -->
-    {{-- tin tuc --}}
-    <section class="section  bg-light top-slant-white">
-      <div class="clearfix mb-5 pb-5">
-        <div class="container-fluid">
-          <div class="row" data-aos="fade">
-            <div class="col-md-12 text-center heading-wrap">
-              <h2>Tin Tức</h2>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="blog d-block">
-              <a class="bg-image d-block" href="single.html" style="background-image: url('{{url('')}}/public/template/img/news1.jpg');"></a>
-              <div class="text">
-                <h3><a href="single.html">Bạn Chắc Chắn Sẽ Bị Choáng Ngợp Và Bất Ngờ Vì Không Gian Của Vua Chả Giò Siêu Đẹp Với Những Món Ăn Siêu Ngon Mà Giá Lại Rẻ</a></h3>
-                <p class="sched-time">
-                  <span> NGÀY 11 THÁNG BA, 2019</span> <br>
-                </p>
-                <p>Bạn chắc chắn sẽ bị choáng ngợp và bất ngờ vì không gian của Vua Chả Giò siêu đẹp với những món ăn siêu ngon mà giá lại rẻ, thậm chí còn rẻ hơn cả bạn đi ăn ở vỉa hè thật khó tin</p>
-                
-                <p><a href="#" class="btn btn-primary btn-sm">Xem Thêm</a></p>
-                
-              </div>
-              
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="blog d-block">
-              <a class="bg-image d-block" href="single.html" style="background-image: url('{{url('')}}/public/template/img/news2.jpg');"></a>
-              <div class="text">
-                <h3><a href="single.html">Mùa Đông Hà Nội Thi Vị Nhất Vào Mỗi Buổi Sáng Thức Dậy Hoặc Những Khi Chiều Về</a></h3>
-                <p class="sched-time">
-                  <span> NGÀY 28 THÁNG MƯỜI HAI, 2019</span> <br>
-                </p>
-                <p>Mùa đông Hà Nội thi vị nhất vào mỗi buổi sáng thức dậy hoặc những khi chiều về. Sáng sáng, nhiều người thường thích ngồi vỉa hè ngắm đường phố, những con người qua lại, chiều về lại khoái nhâm nhi vài ly rượu hàn huyên với bạn bè bên mâm ẩm thực truyền thống</p>
-                
-                <p><a href="#" class="btn btn-primary btn-sm">Xem Thêm</a></p>
-                
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section> <!-- .section -->
+    <!-- .section -->
 
     <footer class="site-footer" role="contentinfo">
       

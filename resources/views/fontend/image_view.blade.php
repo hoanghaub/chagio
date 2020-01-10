@@ -51,9 +51,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{route('promotion_view')}}">Khuyến Mãi</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('news_view')}}">Tin Tức</a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="{{route('image_view')}}">Hình Ảnh</a>
               </li>

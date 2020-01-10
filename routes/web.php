@@ -91,18 +91,7 @@ Route::group(['prefix'=>'admin'],function(){
    Route::get('menu_delete/{id}','Admin\MenuController@delete')->name('menu_delete');
    Route::get('menu_edit/{id}','Admin\MenuController@edit')->name('menu_edit');
    Route::post('menu_edit/{id}','Admin\MenuController@update')->name('menu_edit');
-   //news
-   Route::get('news','Admin\NewsController@index')->name('news');
-   Route::post('news','Admin\NewsController@create')->name('news');
-   Route::get('news_delete/{id}','Admin\NewsController@delete')->name('news_delete');
-   Route::get('news_edit/{id}','Admin\NewsController@edit')->name('news_edit');
-   Route::post('news_edit/{id}','Admin\NewsController@update')->name('news_edit');
-   //news_detail
-   Route::get('news_detail','Admin\NewsDetailController@index')->name('news_detail');
-   Route::post('news_detail','Admin\NewsDetailController@create')->name('news_detail');
-   Route::get('news_detail_delete/{id}','Admin\NewsDetailController@delete')->name('news_detail_delete');
-   Route::get('news_detail_edit/{id}','Admin\NewsDetailController@edit')->name('news_detail_edit');
-   Route::post('news_detail_edit/{id}','Admin\NewsDetailController@update')->name('news_detail_edit');
+   
    //promotion
    Route::get('promotion','Admin\PromotionController@index')->name('promotion');
    Route::post('promotion','Admin\PromotionController@create')->name('promotion');
@@ -136,10 +125,7 @@ Route::group(['prefix'=>'View'],function(){
     Route::get('promotion_detail_view/{id}','Fontend\PromotionDetailController@index')->name('promotion_detail_view');
     //Article_detail
     Route::get('article_detail_view/{id}','Fontend\ArticleDetailController@index')->name('article_detail_view');
-    //News
-    Route::get('news_view','Fontend\NewViewController@index')->name('news_view');
-    //News_detail
-    Route::get('news_detail_view','Fontend\NewsDetailController@index')->name('news_detail_view');
+    
     //Image
     Route::get('image_view','Fontend\ImageViewController@index')->name('image_view');
     //Contact
