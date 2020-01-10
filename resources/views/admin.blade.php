@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="{{url('')}}/public/admin/img/logo/logo.png" rel="icon">
-  <title>RuangAdmin - Dashboard</title>
+  <title>Admin</title>
   <link href="{{url('')}}/public/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="{{url('')}}/public/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="{{url('')}}/public/admin/css/ruang-admin.min.css" rel="stylesheet">
@@ -48,7 +48,6 @@
             <a class="collapse-item" href="{{route('images_cs3')}}">Ảnh Cơ Sở 3</a>
             <a class="collapse-item" href="{{route('images_cs4')}}">Ảnh Cở Sở 4</a>
             <a class="collapse-item" href="{{route('images_cs5')}}">Ảnh Cở Sở 5</a>
-            <a class="collapse-item" href="{{route('images_food')}}">Ảnh Món Ăn</a>
             <a class="collapse-item" href="{{route('images_customer')}}">Ảnh Khách Hàng</a>
           </div>
         </div>
@@ -106,15 +105,22 @@
             <h6 class="collapse-header">Example Pages</h6>
             <a class="collapse-item" href="{{route('news')}}">news</a>
             <a class="collapse-item" href="{{route('news_detail')}}">news detail</a>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            
           </div>
         </div>
       </li>
+      
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="{{route('promotion')}}">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span>
+          <span>promotion</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('promotion_detail')}}">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>promotion detail</span>
         </a>
       </li>
       <hr class="sidebar-divider">
@@ -139,7 +145,7 @@
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="login.html">
+                <a class="dropdown-item" href="{{route('logout')}}">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>

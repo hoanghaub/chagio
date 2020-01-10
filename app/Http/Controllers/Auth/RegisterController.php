@@ -7,7 +7,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Http\Request;
+use Session;
 class RegisterController extends Controller
 {
     /*
@@ -49,9 +50,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'name' => ['required', 'string'],
+            'email' => ['required', 'string', 'email'],
+            'password' => ['required', 'string', 'min:8'],
         ]);
     }
 
@@ -69,4 +70,33 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function getRegister(){
+        return view('security/register');
+    }
+
+    public function postRegister(Request $request){
+        //kiem tra du lieu vao
+        $allRequest = $request->all();
+        $validator = $this->validator($allRequest);
+
+        if($validator->fails()){
+            //du lieu khong thoa man dieu kien se bao loi
+            return redirect()->route('register')->withErrors($validator)->withInput();
+        }else{
+            //du lieu hop le se thuc hien tao nguoi dung trong csdl
+            if($this->create($allRequest)){
+                //insert thanh coong se hien thi thong bao
+                Session::flash('success','Đăng kí thành công !');
+                return redirect()->route('login');
+            }else{
+                //insert that bai se hien thi thong bao loi
+                Session::flash('error','Đăng kí thất bại');
+                return redirect()->route('register');
+            }
+        }
+    }
+    
+
+    
 }

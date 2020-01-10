@@ -32,7 +32,7 @@ create table promotion_detail
   name varchar(200) not null,
   day varchar(255) not null,
   img varchar(255) null,
-  content varchar(255) not null,
+  content text not null,
   created_at timestamp null default current_timestamp,
   updated_at timestamp null default current_timestamp
 );
@@ -161,4 +161,13 @@ create table address
   email varchar(255) not null,
   created_at timestamp null default current_timestamp,
   updated_at timestamp null default current_timestamp
+);
+create table users
+(
+  id int unsigned primary key not null auto_increment,
+  name varchar(200) not null,
+  email varchar(255) not null,
+  password varchar(50) not null,
+  created_at timestamp null default current_timestamp,
+  updated_at timestamp null default current_timestamp 
 )

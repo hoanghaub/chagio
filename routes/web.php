@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('template');
 Route::group(['prefix'=>'admin'],function(){
    // admin
    Route::get('/','Admin\AdminController@index')->name('admin');
@@ -54,12 +54,7 @@ Route::group(['prefix'=>'admin'],function(){
    Route::get('images_customer_delete/{id}','Admin\ImagesCustomerController@delete')->name('images_customer_delete');
    Route::get('images_customer_edit/{id}','Admin\ImagesCustomerController@edit')->name('images_customer_edit');
    Route::post('images_customer_edit/{id}','Admin\ImagesCustomerController@update')->name('images_customer_edit');
-   //images_food
-   Route::get('images_food','Admin\ImagesFoodController@index')->name('images_food');
-   Route::post('images_food','Admin\ImagesFoodController@create')->name('images_food');
-   Route::get('images_food_delete/{id}','Admin\ImagesFoodController@delete')->name('images_food_delete');
-   Route::get('images_food_edit/{id}','Admin\ImagesFoodController@edit')->name('images_food_edit');
-   Route::post('images_food_edit/{id}','Admin\ImagesFoodController@update')->name('images_food_edit');
+   
    //address
    Route::get('address','Admin\AddressController@index')->name('address');
    Route::post('address','Admin\AddressController@create')->name('address');
@@ -104,5 +99,49 @@ Route::group(['prefix'=>'admin'],function(){
    Route::post('news_edit/{id}','Admin\NewsController@update')->name('news_edit');
    //news_detail
    Route::get('news_detail','Admin\NewsDetailController@index')->name('news_detail');
+   Route::post('news_detail','Admin\NewsDetailController@create')->name('news_detail');
+   Route::get('news_detail_delete/{id}','Admin\NewsDetailController@delete')->name('news_detail_delete');
+   Route::get('news_detail_edit/{id}','Admin\NewsDetailController@edit')->name('news_detail_edit');
+   Route::post('news_detail_edit/{id}','Admin\NewsDetailController@update')->name('news_detail_edit');
+   //promotion
+   Route::get('promotion','Admin\PromotionController@index')->name('promotion');
+   Route::post('promotion','Admin\PromotionController@create')->name('promotion');
+   Route::get('promotion_delete/{id}','Admin\PromotionController@delete')->name('promotion_delete');
+   Route::get('promotion_edit/{id}','Admin\PromotionController@edit')->name('promotion_edit');
+   Route::post('promotion_edit/{id}','Admin\PromotionController@update')->name('promotion_edit');
+   //promotion detail
+   Route::get('promotion_detail','Admin\PromotionDetailController@index')->name('promotion_detail');
+   Route::post('promotion_detail','Admin\PromotionDetailController@create')->name('promotion_detail');
+   Route::get('promotion_detail_delete/{id}','Admin\PromotionDetailController@delete')->name('promotion_detail_delete');
+   Route::get('promotion_detail_edit/{id}','Admin\PromotionDetailController@edit')->name('promotion_detail_edit');
+   Route::post('promotion_detail_edit/{id}','Admin\PromotionDetailController@update')->name('promotion_detail_edit');
+
 });
-Route::get('login','Auth\LoginController@login')->name('login');
+//su ly dang nhap
+Route::get('login','Auth\LoginController@getLogin')->name('login');
+Route::post('login','Auth\LoginController@postLogin')->name('login');
+//dang xuat
+Route::get('logout','Auth\LoginController@logout')->name('logout');
+//register
+Route::get('register','Auth\RegisterController@getRegister')->name('register');
+Route::post('register','Auth\RegisterController@postRegister')->name('register');
+Route::group(['prefix'=>'View'],function(){
+    //Introduction
+    Route::get('introduction_view','Fontend\IntroductionViewController@index')->name('introduction_view');
+    //Menu
+    Route::get('menu_view','Fontend\MenuViewController@index')->name('menu_view');
+    //Promotion
+    Route::get('promotion_view','Fontend\PromotionViewController@index')->name('promotion_view');
+    //Promotion_detail
+    Route::get('promotion_detail_view/{id}','Fontend\PromotionDetailController@index')->name('promotion_detail_view');
+    //Article_detail
+    Route::get('article_detail_view/{id}','Fontend\ArticleDetailController@index')->name('article_detail_view');
+    //News
+    Route::get('news_view','Fontend\NewViewController@index')->name('news_view');
+    //News_detail
+    Route::get('news_detail_view','Fontend\NewsDetailController@index')->name('news_detail_view');
+    //Image
+    Route::get('image_view','Fontend\ImageViewController@index')->name('image_view');
+    //Contact
+    Route::get('contact_view','Fontend\ContactViewController@index')->name('contact_view');
+});
