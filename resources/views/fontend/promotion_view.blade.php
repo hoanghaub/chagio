@@ -127,7 +127,7 @@
             </div>
             <!-- <h3 class="mb-4">Welcome To Our Restaurant</h3> -->
           @foreach($article_view as $av)
-            <p><a href="" title="">{{$av['name']}}</a></p>
+            <p><a href="{{route('article_detail_view',['id'=>$av['id']])}}" title="" id="{{$av['id']}}">{{$av['name']}}</a></p>
           @endforeach
             <p><img src="{{url('')}}/public/template/img/signature.png" alt="Image" class="img-fluid w-25"></p>
           </div>

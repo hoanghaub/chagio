@@ -143,12 +143,7 @@
               Ngoài ra Vua Chả Giò  còn có những chương trình giảm giá 50% vào thứ 6 chỉ còn 65k/ 1 suất chả giò. Giảm giá 30% dành cho nhóm khách 8 người trở lên.
             </p>
             <br>
-            <img src="{{url('')}}/public/img/1049521846.jpg" alt="">
-            <img src="{{url('')}}/public/img/1057925647.jpg" alt="">
-            <img src="{{url('')}}/public/img/1085039547.jpg" alt="">
-            <img src="{{url('')}}/public/img/1089337500.jpg" alt="">
-            <img src="{{url('')}}/public/img/1123441564.jpg" alt="">
-            <img src="{{url('')}}/public/img/1350372080.jpg" alt="">
+            <p><img src="{{url('public/image')}}/{{$pdv['img']}}" alt=""></p>
           </div>
           @endforeach
           <div class="col-md-4 ml-auto">
